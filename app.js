@@ -164,7 +164,6 @@ class StudentSchedule {
         }
     }
 
-
     handleCellClick(cell) {
         if (!this.isEditMode) return;
 
@@ -575,10 +574,7 @@ class StudentSchedule {
             fileInput.click();
         });
         
-        document.getElementById('importJsonBtn').addEventListener('click', () => {
-            fileInput.accept = '.json';
-            fileInput.click();
-        });
+        // Кнопка импорта JSON УДАЛЕНА
         
         fileInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
@@ -586,9 +582,8 @@ class StudentSchedule {
             
             if (file.name.match(/\.(xlsx|xls)$/i)) {
                 this.importFromExcel(file);
-            } else if (file.name.match(/\.json$/i)) {
-                this.importFromJson(file);
             }
+            // Импорт JSON УДАЛЕН
             
             fileInput.value = '';
         });
@@ -804,167 +799,7 @@ class StudentSchedule {
         return lessons;
     }
 
-    importFromJson(file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            try {
-                const jsonData = JSON.parse(e.target.result);
-                const importedLessons = this.parseJsonData(jsonData);
-                const addedCount = this.mergeScheduleData(importedLessons);
-                
-                this.saveScheduleData();
-                this.generateSchedule();
-                this.showNotification(`Импортировано ${addedCount} занятий!`, 'success');
-            } catch (error) {
-                this.showNotification('Ошибка при импорте JSON', 'error');
-            }
-        };
-        reader.readAsText(file);
-    }
-
-    parseJsonData(data) {
-        console.log("Начало парсинга JSON, тип данных:", typeof data);
-        console.log("Количество элементов:", data?.length);
-        
-        const lessons = [];
-        
-        const dayMap = {
-            'ПН': 0, 'пн': 0,
-            'ВТ': 1, 'вт': 1,
-            'СР': 2, 'ср': 2,
-            'ЧТ': 3, 'чт': 3,
-            'ПТ': 4, 'пт': 4,
-            'СБ': 5, 'сб': 5
-        };
-        
-        const timeMap = {
-            '8:30-10:00': 0, '08:30-10:00': 0,
-            '10:10-11:40': 1, '10:10-11:40': 1,
-            '11:50-13:20': 2, '11:50-13:20': 2,
-            '13:50-15:20': 3, '13:50-15:20': 3,
-            '15:30-17:00': 4, '15:30-17:00': 4,
-            '17:10-18:40': 5, '17:10-18:40': 5,
-            '18:50-20:20': 6, '18:50-20:20': 6
-        };
-        
-        const typeMap = {
-            'лекция': 'lecture',
-            'Лекция': 'lecture',
-            'лекция онлайн': 'lecture online',
-            'Лекция онлайн': 'lecture online',
-            'лекция онлайн ': 'lecture online',
-            'практика': 'practice',
-            'Практика': 'practice',
-            'практика онлайн': 'practice online',
-            'Практика онлайн': 'practice online',
-            'практика онлайн ': 'practice online'
-        };
-        
-        const colors = {
-            'lecture': '#8E89A7',
-            'lecture online': '#6C63FF',
-            'practice': '#4CAF50',
-            'practice online': '#FF9800'
-        };
-        
-        let currentDay = null;
-        
-        for (let i = 0; i < data.length; i++) {
-            const item = data[i];
-            if (!item) continue;
-            
-            const dayValue = item["День"];
-            if (dayValue && dayMap[dayValue] !== undefined) {
-                currentDay = dayMap[dayValue];
-                console.log(`Элемент ${i}: установлен день = ${dayValue} (${currentDay})`);
-                continue;
-            }
-            
-            const subject = item["Предмет"] ? String(item["Предмет"]).trim() : '';
-            if (!subject || subject === '') {
-                continue;
-            }
-            
-            if (currentDay === null) {
-                console.log(`Элемент ${i}: пропуск - нет дня для предмета "${subject}"`);
-                continue;
-            }
-            
-            const timeValue = item["Время"] ? String(item["Время"]).trim() : '';
-            if (!timeValue || timeValue === '') {
-                console.log(`Элемент ${i}: пропуск - нет времени для "${subject}"`);
-                continue;
-            }
-            
-            const timeIndex = timeMap[timeValue];
-            if (timeIndex === undefined) {
-                console.log(`Элемент ${i}: неизвестное время "${timeValue}"`);
-                continue;
-            }
-            
-            const teacher = item["Преподаватель"] ? String(item["Преподаватель"]).trim() : '';
-            const room = item["Аудитория"] ? String(item["Аудитория"]).trim() : '';
-            const typeRaw = item["Тип"] ? String(item["Тип"]).trim() : '';
-            
-            let lessonType = typeMap[typeRaw] || typeMap[typeRaw?.toLowerCase()] || 'lecture';
-            
-            let start = null, end = null;
-            
-            const startDateRaw = item["Датаначала"];
-            const endDateRaw = item["Датаконца"];
-            
-            if (startDateRaw && startDateRaw !== 'null') {
-                try {
-                    if (typeof startDateRaw === 'string' && startDateRaw.includes('/')) {
-                        const parts = startDateRaw.split('/');
-                        if (parts.length === 3) {
-                            start = new Date(parts[2], parts[1] - 1, parts[0]);
-                        }
-                    } else {
-                        start = new Date(startDateRaw);
-                    }
-                    if (start && isNaN(start.getTime())) start = null;
-                } catch(e) {
-                    console.log(`Ошибка даты начала: ${startDateRaw}`);
-                }
-            }
-            
-            if (endDateRaw && endDateRaw !== 'null') {
-                try {
-                    if (typeof endDateRaw === 'string' && endDateRaw.includes('/')) {
-                        const parts = endDateRaw.split('/');
-                        if (parts.length === 3) {
-                            end = new Date(parts[2], parts[1] - 1, parts[0]);
-                        }
-                    } else {
-                        end = new Date(endDateRaw);
-                    }
-                    if (end && isNaN(end.getTime())) end = null;
-                } catch(e) {
-                    console.log(`Ошибка даты конца: ${endDateRaw}`);
-                }
-            }
-            
-            console.log(`Элемент ${i}: НАЙДЕНО: ${subject}, день=${currentDay}, время=${timeIndex} (${timeValue}), тип=${lessonType}`);
-            
-            lessons.push({
-                day: currentDay,
-                time: timeIndex,
-                lesson: {
-                    name: subject,
-                    teacher: teacher,
-                    room: room,
-                    type: lessonType,
-                    color: colors[lessonType] || '#8E89A7'
-                },
-                startDate: start,
-                endDate: end
-            });
-        }
-        
-        console.log(`ИТОГО НАЙДЕНО ЗАНЯТИЙ В JSON: ${lessons.length}`);
-        return lessons;
-    }
+    // Функция импорта JSON УДАЛЕНА
 
     mergeScheduleData(importedLessons) {
         let addedCount = 0;
@@ -1013,33 +848,85 @@ class StudentSchedule {
     }
 
     setupExportHandlers() {
+        // Создаем кнопку экспорта Excel вместо JSON
         const exportBtn = document.createElement('button');
-        exportBtn.id = 'exportJsonBtn';
-        exportBtn.textContent = 'Экспорт JSON';
+        exportBtn.id = 'exportExcelBtn';
+        exportBtn.textContent = 'Экспорт Excel';
         exportBtn.style.marginLeft = '10px';
         
         const controls = document.querySelector('.controls');
         controls.appendChild(exportBtn);
 
         exportBtn.addEventListener('click', () => {
-            this.exportToJson();
+            this.exportToExcel();
         });
     }
 
-    exportToJson() {
-        const dataStr = JSON.stringify(this.scheduleData, null, 2);
-        const blob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
+    // Новый метод экспорта в Excel
+    exportToExcel() {
+        // Создаем данные для Excel
+        const times = [
+            '08:30-10:00', '10:10-11:40', '11:50-13:20',
+            '13:50-15:20', '15:30-17:00', '17:10-18:40',
+            '18:50-20:20'
+        ];
         
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `schedule_week_${this.currentWeek}.json`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
+        const daysOfWeek = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
         
-        this.showNotification('Расписание экспортировано в JSON!', 'success');
+        // Получаем даты текущей недели
+        const weekDates = this.getWeekDates(this.currentWeek);
+        
+        // Создаем массив для Excel
+        const excelData = [];
+        
+        // Заголовок с датами
+        const headerRow = ['День / Время', ...times];
+        excelData.push(headerRow);
+        
+        // Заполняем данные по дням
+        for (let dayIndex = 0; dayIndex < 6; dayIndex++) {
+            const dayDate = new Date(weekDates.start);
+            dayDate.setDate(dayDate.getDate() + dayIndex);
+            const dateStr = `${dayDate.getDate().toString().padStart(2, '0')}.${(dayDate.getMonth() + 1).toString().padStart(2, '0')}`;
+            
+            const row = [`${daysOfWeek[dayIndex]} (${dateStr})`];
+            
+            for (let timeIndex = 0; timeIndex < times.length; timeIndex++) {
+                const lesson = this.scheduleData[this.currentWeek]?.[dayIndex]?.[timeIndex];
+                if (lesson) {
+                    let cellValue = `${lesson.name}`;
+                    if (lesson.teacher) cellValue += `\n${lesson.teacher}`;
+                    if (lesson.room) cellValue += `\n${lesson.room}`;
+                    if (lesson.type) cellValue += `\n${this.getTypeText(lesson.type)}`;
+                    row.push(cellValue);
+                } else {
+                    row.push('');
+                }
+            }
+            
+            excelData.push(row);
+        }
+        
+        // Создаем книгу Excel
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.aoa_to_sheet(excelData);
+        
+        // Настраиваем ширину колонок
+        ws['!cols'] = [
+            { wch: 20 }, // День
+            ...times.map(() => ({ wch: 25 })) // Время
+        ];
+        
+        XLSX.utils.book_append_sheet(wb, ws, 'Расписание');
+        
+        // Генерируем имя файла
+        const dateStr = `${weekDates.start.getFullYear()}-${(weekDates.start.getMonth() + 1).toString().padStart(2, '0')}-${weekDates.start.getDate().toString().padStart(2, '0')}`;
+        const filename = `Расписание_неделя_${this.currentWeek}_${dateStr}.xlsx`;
+        
+        // Сохраняем файл
+        XLSX.writeFile(wb, filename);
+        
+        this.showNotification(`Расписание экспортировано в Excel (неделя ${this.currentWeek})!`, 'success');
     }
 }
 
