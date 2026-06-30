@@ -843,26 +843,21 @@ class StudentSchedule {
     }
 
     setupExportHandlers() {
-        // Проверяем, существует ли уже кнопка, чтобы не создавать дубликат
-        let exportBtn = document.getElementById('exportExcelBtn');
-        if (!exportBtn) {
-            exportBtn = document.createElement('button');
-            exportBtn.id = 'exportExcelBtn';
-            exportBtn.textContent = 'Экспорт Excel';
-            exportBtn.style.marginLeft = '10px';
+        // Используем существующую кнопку из HTML, не создаем новую
+        const exportBtn = document.getElementById('exportExcelBtn');
+        if (exportBtn) {
+            // Удаляем старые обработчики
+            const newBtn = exportBtn.cloneNode(true);
+            exportBtn.parentNode.replaceChild(newBtn, exportBtn);
             
-            const controls = document.querySelector('.controls');
-            controls.appendChild(exportBtn);
+            newBtn.addEventListener('click', () => {
+                this.exportToExcel();
+            });
         }
-
-        exportBtn.addEventListener('click', () => {
-            this.exportToExcel();
-        });
     }
 
     exportToExcel() {
         try {
-            // Проверяем, загружена ли библиотека XLSX
             if (typeof XLSX === 'undefined') {
                 this.showNotification('Библиотека XLSX не загружена!', 'error');
                 return;
@@ -874,67 +869,117 @@ class StudentSchedule {
                 '18:50-20:20'
             ];
             
-            const daysOfWeek = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
-            
-            const weekDates = this.getWeekDates(this.currentWeek);
-            
-            const excelData = [];
-            
-            // Заголовок
-            const headerRow = ['День / Время', ...times];
-            excelData.push(headerRow);
-            
-            // Данные по дням
-            let hasData = false;
-            for (let dayIndex = 0; dayIndex < 6; dayIndex++) {
-                const dayDate = new Date(weekDates.start);
-                dayDate.setDate(dayDate.getDate() + dayIndex);
-                const dateStr = `${dayDate.getDate().toString().padStart(2, '0')}.${(dayDate.getMonth() + 1).toString().padStart(2, '0')}`;
-                
-                const row = [`${daysOfWeek[dayIndex]} (${dateStr})`];
-                
-                for (let timeIndex = 0; timeIndex < times.length; timeIndex++) {
-                    const lesson = this.scheduleData[this.currentWeek]?.[dayIndex]?.[timeIndex];
-                    if (lesson) {
-                        hasData = true;
-                        let cellValue = `${lesson.name}`;
-                        if (lesson.teacher) cellValue += `\n${lesson.teacher}`;
-                        if (lesson.room) cellValue += `\n${lesson.room}`;
-                        if (lesson.type) cellValue += `\n${this.getTypeText(lesson.type)}`;
-                        row.push(cellValue);
-                    } else {
-                        row.push('');
-                    }
-                }
-                
-                excelData.push(row);
-            }
-            
-            if (!hasData) {
-                this.showNotification('На текущей неделе нет занятий для экспорта!', 'error');
-                return;
-            }
+            const daysOfWeek = ['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
             
             // Создаем книгу Excel
             const wb = XLSX.utils.book_new();
-            const ws = XLSX.utils.aoa_to_sheet(excelData);
+            let hasData = false;
             
-            // Настраиваем ширину колонок
-            ws['!cols'] = [
-                { wch: 20 },
-                ...times.map(() => ({ wch: 30 }))
-            ];
+            // Определяем, какие недели есть в данных
+            const weeks = Object.keys(this.scheduleData).filter(w => {
+                const weekNum = parseInt(w);
+                return weekNum > 0 && Object.keys(this.scheduleData[w]).length > 0;
+            }).map(Number).sort((a, b) => a - b);
             
-            XLSX.utils.book_append_sheet(wb, ws, 'Расписание');
+            if (weeks.length === 0) {
+                this.showNotification('Нет данных для экспорта!', 'error');
+                return;
+            }
+            
+            // Для каждой недели создаем лист
+            weeks.forEach(weekNum => {
+                const weekData = this.scheduleData[weekNum];
+                const weekDates = this.getWeekDates(weekNum);
+                
+                // Определяем название листа
+                let sheetName = `Неделя ${weekNum}`;
+                if (weekNum % 2 === 1) {
+                    sheetName = `Верхняя неделя ${weekNum}`;
+                } else {
+                    sheetName = `Нижняя неделя ${weekNum}`;
+                }
+                // Ограничиваем длину названия листа (Excel максимум 31 символ)
+                if (sheetName.length > 31) {
+                    sheetName = sheetName.substring(0, 31);
+                }
+                
+                const excelData = [];
+                
+                // Заголовок с датами
+                const headerRow = ['День', 'Время', 'Предмет', 'Преподаватель', 'Аудитория', 'Тип', 'Дата начала', 'Дата конца'];
+                excelData.push(headerRow);
+                
+                // Заполняем данные по дням
+                for (let dayIndex = 0; dayIndex < 6; dayIndex++) {
+                    // Добавляем строку с названием дня (только если есть занятия в этот день)
+                    let hasDayLessons = false;
+                    for (let timeIndex = 0; timeIndex < times.length; timeIndex++) {
+                        if (weekData[dayIndex]?.[timeIndex]) {
+                            hasDayLessons = true;
+                            break;
+                        }
+                    }
+                    
+                    if (hasDayLessons) {
+                        // Добавляем строку с названием дня
+                        const dayRow = [daysOfWeek[dayIndex], '', '', '', '', '', '', ''];
+                        excelData.push(dayRow);
+                        
+                        // Добавляем занятия
+                        for (let timeIndex = 0; timeIndex < times.length; timeIndex++) {
+                            const lesson = weekData[dayIndex]?.[timeIndex];
+                            if (lesson) {
+                                hasData = true;
+                                const row = [
+                                    '', // День (пусто, т.к. уже указан выше)
+                                    times[timeIndex],
+                                    lesson.name || '',
+                                    lesson.teacher || '',
+                                    lesson.room || '',
+                                    this.getTypeText(lesson.type) || '',
+                                    '', // Дата начала (можно добавить при необходимости)
+                                    ''  // Дата конца (можно добавить при необходимости)
+                                ];
+                                excelData.push(row);
+                            }
+                        }
+                    }
+                }
+                
+                // Если есть данные, создаем лист
+                if (excelData.length > 1) {
+                    const ws = XLSX.utils.aoa_to_sheet(excelData);
+                    
+                    // Настраиваем ширину колонок
+                    ws['!cols'] = [
+                        { wch: 8 },  // День
+                        { wch: 15 }, // Время
+                        { wch: 30 }, // Предмет
+                        { wch: 25 }, // Преподаватель
+                        { wch: 15 }, // Аудитория
+                        { wch: 15 }, // Тип
+                        { wch: 15 }, // Дата начала
+                        { wch: 15 }  // Дата конца
+                    ];
+                    
+                    XLSX.utils.book_append_sheet(wb, ws, sheetName);
+                }
+            });
+            
+            if (!hasData || wb.SheetNames.length === 0) {
+                this.showNotification('Нет данных для экспорта!', 'error');
+                return;
+            }
             
             // Имя файла
-            const dateStr = `${weekDates.start.getFullYear()}-${(weekDates.start.getMonth() + 1).toString().padStart(2, '0')}-${weekDates.start.getDate().toString().padStart(2, '0')}`;
-            const filename = `Расписание_неделя_${this.currentWeek}_${dateStr}.xlsx`;
+            const now = new Date();
+            const dateStr = `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
+            const filename = `Расписание_${dateStr}.xlsx`;
             
             // Сохраняем
             XLSX.writeFile(wb, filename);
             
-            this.showNotification(`Расписание экспортировано в Excel (неделя ${this.currentWeek})!`, 'success');
+            this.showNotification(`Расписание экспортировано в Excel (${wb.SheetNames.length} листов)!`, 'success');
         } catch (error) {
             console.error('Ошибка экспорта:', error);
             this.showNotification(`Ошибка экспорта: ${error.message}`, 'error');
