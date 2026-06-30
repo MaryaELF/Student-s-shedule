@@ -1,7 +1,3 @@
-// ============================================================
-// ИМПОРТ (поддержка файлов с номерами недель в названиях листов)
-// ============================================================
-
 setupImportHandlers() {
     const fileInput = document.createElement('input');
     fileInput.type = 'file';
@@ -35,36 +31,33 @@ async importFromExcel(file) {
         
         let totalAddedCount = 0;
         let weeksFound = [];
+        let allLessons = [];
         
         for (const sheet of sheetsData) {
-            console.log(`\n🔍 Обработка листа: "${sheet.sheetName}"`);
-            console.log(`   Количество строк в листе: ${sheet.data.length}`);
+            console.log(`\nОбработка листа: "${sheet.sheetName}"`);
+            console.log(`Количество строк в листе: ${sheet.data.length}`);
             
-            // --- ОПРЕДЕЛЯЕМ НОМЕР НЕДЕЛИ ИЗ НАЗВАНИЯ ЛИСТА ---
             let weekNumber = null;
             const sheetName = sheet.sheetName.trim();
             
-            // Ищем числа в названии листа (например, "Нижняя неделя 20" → 20)
             const weekMatch = sheetName.match(/(\d+)/);
             if (weekMatch) {
                 weekNumber = parseInt(weekMatch[1], 10);
-                console.log(`   Определён номер недели из названия листа: ${weekNumber}`);
+                console.log(`Определён номер недели из названия листа: ${weekNumber}`);
                 weeksFound.push(weekNumber);
             } else {
-                // Если номер недели не найден — используем текущую неделю
                 weekNumber = this.currentWeek;
-                console.log(`   Номер недели не найден, используем текущую: ${weekNumber}`);
+                console.log(`Номер недели не найден, используем текущую: ${weekNumber}`);
             }
             
-            // Парсим данные листа
             const importedLessons = this.parseExcelData(sheet.data, weekNumber);
-            console.log(`   Найдено занятий на листе: ${importedLessons.length}`);
+            console.log(`Найдено занятий на листе: ${importedLessons.length}`);
             
-            // Сохраняем занятия в scheduleData
-            const addedCount = this.mergeScheduleData(importedLessons);
-            totalAddedCount += addedCount;
-            console.log(`   Добавлено занятий с листа: ${addedCount}`);
+            allLessons = allLessons.concat(importedLessons);
         }
+        
+        const addedCount = this.mergeScheduleData(allLessons);
+        totalAddedCount = addedCount;
         
         this.saveScheduleData();
         this.generateSchedule();
@@ -158,7 +151,6 @@ parseExcelData(data, weekNumber) {
     let currentDay = null;
     let headerSkipped = false;
     
-    // Функция для преобразования Excel-даты (число) в объект Date
     const excelDateToJSDate = (serial) => {
         if (typeof serial !== 'number') return null;
         const utc_days = Math.floor(serial - 25569);
@@ -170,24 +162,21 @@ parseExcelData(data, weekNumber) {
         let row = data[i];
         if (!row || row.length === 0) continue;
         
-        // Дополняем строку до 8 столбцов, если нужно
         while (row.length < 8) {
             row.push('');
         }
         
-        // Пропускаем строку заголовков (если первый столбец = "День")
         if (!headerSkipped && row[0] === 'День') {
             headerSkipped = true;
-            console.log(`   Строка ${i}: пропущена строка заголовков`);
+            console.log(`Строка ${i}: пропущена строка заголовков`);
             continue;
         }
         
         const dayCell = row[0] ? String(row[0]).trim() : '';
         
-        // Если ячейка содержит день недели → устанавливаем currentDay
         if (dayCell && dayMap[dayCell] !== undefined) {
             currentDay = dayMap[dayCell];
-            console.log(`   Строка ${i}: УСТАНОВЛЕН ДЕНЬ = ${dayCell} (${currentDay})`);
+            console.log(`Строка ${i}: УСТАНОВЛЕН ДЕНЬ = ${dayCell} (${currentDay})`);
             continue;
         }
         
@@ -197,19 +186,19 @@ parseExcelData(data, weekNumber) {
         }
         
         if (currentDay === null) {
-            console.log(`   Строка ${i}: пропуск - нет дня для предмета "${subject}"`);
+            console.log(`Строка ${i}: пропуск - нет дня для предмета "${subject}"`);
             continue;
         }
         
         const timeCell = row[1] ? String(row[1]).trim() : '';
         if (!timeCell || timeCell === '') {
-            console.log(`   Строка ${i}: пропуск - нет времени для "${subject}"`);
+            console.log(`Строка ${i}: пропуск - нет времени для "${subject}"`);
             continue;
         }
         
         const timeIndex = timeMap[timeCell];
         if (timeIndex === undefined) {
-            console.log(`   Строка ${i}: неизвестное время "${timeCell}"`);
+            console.log(`Строка ${i}: неизвестное время "${timeCell}"`);
             continue;
         }
         
@@ -218,10 +207,8 @@ parseExcelData(data, weekNumber) {
         const typeRaw = row[5] ? String(row[5]).trim() : '';
         let lessonType = typeMap[typeRaw] || typeMap[typeRaw?.toLowerCase()] || 'lecture';
         
-        // Парсим даты начала/конца (столбцы G и H, индексы 6 и 7)
         let startDate = null, endDate = null;
         
-        // Столбец G (индекс 6) - дата начала
         if (row[6]) {
             try {
                 if (typeof row[6] === 'number') {
@@ -230,10 +217,9 @@ parseExcelData(data, weekNumber) {
                     startDate = new Date(row[6]);
                 }
                 if (startDate && isNaN(startDate.getTime())) startDate = null;
-            } catch(e) { /* игнорируем */ }
+            } catch(e) {}
         }
         
-        // Столбец H (индекс 7) - дата конца
         if (row[7]) {
             try {
                 if (typeof row[7] === 'number') {
@@ -242,54 +228,48 @@ parseExcelData(data, weekNumber) {
                     endDate = new Date(row[7]);
                 }
                 if (endDate && isNaN(endDate.getTime())) endDate = null;
-            } catch(e) { /* игнорируем */ }
+            } catch(e) {}
         }
         
-        // Если есть startDate и endDate, используем диапазон недель
+        const lessonObj = {
+            name: subject,
+            teacher: teacher,
+            room: room,
+            type: lessonType,
+            color: colors[lessonType] || '#8E89A7'
+        };
+        
         if (startDate && endDate) {
-            console.log(`   Диапазон: ${startDate.toLocaleDateString()} – ${endDate.toLocaleDateString()}`);
+            console.log(`Диапазон: ${startDate.toLocaleDateString()} – ${endDate.toLocaleDateString()}`);
             lessons.push({
                 day: currentDay,
                 time: timeIndex,
-                lesson: {
-                    name: subject,
-                    teacher: teacher,
-                    room: room,
-                    type: lessonType,
-                    color: colors[lessonType] || '#8E89A7'
-                },
+                lesson: lessonObj,
                 startDate: startDate,
-                endDate: endDate
+                endDate: endDate,
+                weekNumber: null
             });
         } else {
-            // Если дат нет — добавляем на указанную неделю (или текущую)
+            const targetWeek = weekNumber || this.currentWeek;
             lessons.push({
                 day: currentDay,
                 time: timeIndex,
-                lesson: {
-                    name: subject,
-                    teacher: teacher,
-                    room: room,
-                    type: lessonType,
-                    color: colors[lessonType] || '#8E89A7'
-                },
-                weekNumber: weekNumber  // сохраняем номер недели для mergeScheduleData
+                lesson: lessonObj,
+                startDate: null,
+                endDate: null,
+                weekNumber: targetWeek
             });
         }
     }
     
-    console.log(`   ИТОГО НАЙДЕНО ЗАНЯТИЙ НА ЛИСТЕ: ${lessons.length}`);
+    console.log(`ИТОГО НАЙДЕНО ЗАНЯТИЙ НА ЛИСТЕ: ${lessons.length}`);
     return lessons;
 }
 
-/**
- * Объединяет импортированные занятия с существующими данными.
- * Если у занятия есть startDate и endDate — раскладывает по всем неделям в диапазоне.
- * Если указан weekNumber — добавляет только на эту неделю.
- * Если ничего не указано — использует текущую неделю.
- */
 mergeScheduleData(importedLessons) {
     let addedCount = 0;
+    let skippedCount = 0;
+    let duplicateCount = 0;
     
     const getWeekNumber = (date) => {
         const start = new Date(this.startDate);
@@ -298,11 +278,12 @@ mergeScheduleData(importedLessons) {
         return Math.floor(diffDays / 7) + 1;
     };
     
+    console.log(`Начинаем объединение ${importedLessons.length} занятий...`);
+    
     for (const item of importedLessons) {
         let targetWeeks = [];
         
         if (item.startDate && item.endDate) {
-            // Раскладываем по всем неделям от startDate до endDate
             let currentDate = new Date(item.startDate);
             const endDate = new Date(item.endDate);
             
@@ -314,26 +295,47 @@ mergeScheduleData(importedLessons) {
                 currentDate.setDate(currentDate.getDate() + 7);
             }
         } else if (item.weekNumber) {
-            // Если указан конкретный номер недели
             targetWeeks = [item.weekNumber];
         } else {
-            // fallback: текущая неделя
             targetWeeks = [this.currentWeek];
         }
         
-        // Добавляем занятие на каждую целевую неделю
         for (const weekNum of targetWeeks) {
-            if (weekNum < 1 || weekNum > 52) continue;
+            if (weekNum < 1 || weekNum > 52) {
+                skippedCount++;
+                continue;
+            }
             
-            if (!this.scheduleData[weekNum]) this.scheduleData[weekNum] = {};
-            if (!this.scheduleData[weekNum][item.day]) this.scheduleData[weekNum][item.day] = {};
+            if (!this.scheduleData[weekNum]) {
+                this.scheduleData[weekNum] = {};
+            }
+            if (!this.scheduleData[weekNum][item.day]) {
+                this.scheduleData[weekNum][item.day] = {};
+            }
             
-            if (!this.scheduleData[weekNum][item.day][item.time]) {
+            if (this.scheduleData[weekNum][item.day][item.time]) {
+                const existing = this.scheduleData[weekNum][item.day][item.time];
+                if (existing.name === item.lesson.name && 
+                    existing.teacher === item.lesson.teacher) {
+                    duplicateCount++;
+                } else {
+                    console.warn(`Конфликт на неделе ${weekNum}, день ${item.day}, время ${item.time}:`);
+                    console.warn(`   Было: ${existing.name} (${existing.teacher})`);
+                    console.warn(`   Стало: ${item.lesson.name} (${item.lesson.teacher})`);
+                    this.scheduleData[weekNum][item.day][item.time] = { ...item.lesson };
+                    addedCount++;
+                }
+            } else {
                 this.scheduleData[weekNum][item.day][item.time] = { ...item.lesson };
                 addedCount++;
             }
         }
     }
+    
+    console.log(`ИТОГИ ОБЪЕДИНЕНИЯ:`);
+    console.log(`   Добавлено новых занятий: ${addedCount}`);
+    if (duplicateCount > 0) console.log(`   Пропущено дубликатов: ${duplicateCount}`);
+    if (skippedCount > 0) console.log(`   Пропущено (неверная неделя): ${skippedCount}`);
     
     return addedCount;
 }
