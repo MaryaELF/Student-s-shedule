@@ -26,17 +26,12 @@ setupImportHandlers() {
     });
 }
 
-/**
- * Импорт Excel-файла.
- * - Ожидается, что в названиях листов есть номера недель (например, "Неделя 20")
- * - Если номер недели не найден — занятия добавляются на текущую неделю
- */
 async importFromExcel(file) {
     try {
-        console.log("📂 Начало импорта файла:", file.name);
+        console.log("Начало импорта файла:", file.name);
         
         const sheetsData = await this.readExcelFile(file);
-        console.log(`📄 Прочитано листов: ${sheetsData.length}`);
+        console.log(`Прочитано листов: ${sheetsData.length}`);
         
         let totalAddedCount = 0;
         let weeksFound = [];
@@ -53,38 +48,38 @@ async importFromExcel(file) {
             const weekMatch = sheetName.match(/(\d+)/);
             if (weekMatch) {
                 weekNumber = parseInt(weekMatch[1], 10);
-                console.log(`   🏷️ Определён номер недели из названия листа: ${weekNumber}`);
+                console.log(`   Определён номер недели из названия листа: ${weekNumber}`);
                 weeksFound.push(weekNumber);
             } else {
                 // Если номер недели не найден — используем текущую неделю
                 weekNumber = this.currentWeek;
-                console.log(`   📅 Номер недели не найден, используем текущую: ${weekNumber}`);
+                console.log(`   Номер недели не найден, используем текущую: ${weekNumber}`);
             }
             
             // Парсим данные листа
             const importedLessons = this.parseExcelData(sheet.data, weekNumber);
-            console.log(`   📚 Найдено занятий на листе: ${importedLessons.length}`);
+            console.log(`   Найдено занятий на листе: ${importedLessons.length}`);
             
             // Сохраняем занятия в scheduleData
             const addedCount = this.mergeScheduleData(importedLessons);
             totalAddedCount += addedCount;
-            console.log(`   ✅ Добавлено занятий с листа: ${addedCount}`);
+            console.log(`   Добавлено занятий с листа: ${addedCount}`);
         }
         
         this.saveScheduleData();
         this.generateSchedule();
         
-        let message = `✅ Импортировано ${totalAddedCount} занятий!`;
+        let message = `Импортировано ${totalAddedCount} занятий!`;
         if (weeksFound.length > 0) {
             const uniqueWeeks = [...new Set(weeksFound)].sort((a, b) => a - b);
-            message += `\n📅 Недели: ${uniqueWeeks.join(', ')}`;
+            message += `\nНедели: ${uniqueWeeks.join(', ')}`;
         }
         this.showNotification(message, 'success');
         
     } catch (error) {
-        console.error("❌ ОШИБКА ПРИ ИМПОРТЕ:", error);
-        console.error("📋 Стек ошибки:", error.stack);
-        this.showNotification(`❌ Ошибка: ${error.message}`, 'error');
+        console.error("ОШИБКА ПРИ ИМПОРТЕ:", error);
+        console.error("Стек ошибки:", error.stack);
+        this.showNotification(`Ошибка: ${error.message}`, 'error');
     }
 }
 
@@ -115,13 +110,8 @@ readExcelFile(file) {
     });
 }
 
-/**
- * Парсит данные одного листа Excel.
- * @param {Array} data - массив строк листа
- * @param {number} weekNumber - номер недели (если не указан, будет использован fallback)
- */
 parseExcelData(data, weekNumber) {
-    console.log(`📝 Парсинг Excel (неделя ${weekNumber}), строк: ${data.length}`);
+    console.log(`Парсинг Excel (неделя ${weekNumber}), строк: ${data.length}`);
     const lessons = [];
     
     const dayMap = {
@@ -257,7 +247,7 @@ parseExcelData(data, weekNumber) {
         
         // Если есть startDate и endDate, используем диапазон недель
         if (startDate && endDate) {
-            console.log(`   📅 Диапазон: ${startDate.toLocaleDateString()} – ${endDate.toLocaleDateString()}`);
+            console.log(`   Диапазон: ${startDate.toLocaleDateString()} – ${endDate.toLocaleDateString()}`);
             lessons.push({
                 day: currentDay,
                 time: timeIndex,
