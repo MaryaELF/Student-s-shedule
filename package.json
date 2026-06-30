@@ -1,0 +1,12 @@
+{
+  "name": "schedule",
+  "version": "1.0.0",
+  "description": "Учебное расписание",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,2729 @@
+{
+  "20": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "21": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "22": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "23": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "24": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "25": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "26": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "27": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "28": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "29": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "30": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "31": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "32": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "33": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "34": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "35": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "36": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "37": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "0": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "1": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "practice online",
+        "color": "#FF9800"
+      },
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "3": {
+      "0": {
+        "name": "Английский язык",
+        "teacher": "Игнатович Ю.О.",
+        "room": "217",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "1": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Балабанов А.В.",
+        "room": "421",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "3": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    },
+    "4": {
+      "0": {
+        "name": "Физика",
+        "teacher": "Горбачев А.А.",
+        "room": "227",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "2": {
+        "name": "Операционные системы",
+        "teacher": "Миронов В.Ю.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "3": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "4": {
+        "name": "Алгоритмы и структуры данных",
+        "teacher": "Савкин Д.А.",
+        "room": "225",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  },
+  "38": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Математический анализ",
+        "teacher": "Ставицкая Е.П.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "2": {
+        "name": "Комплексный анализ",
+        "teacher": "Верещагина И.С.",
+        "room": "208",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "4": {
+        "name": "Физкультура",
+        "teacher": "По выбору",
+        "room": "По выбору",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    },
+    "1": {
+      "0": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "lecture",
+        "color": "#8E89A7"
+      },
+      "1": {
+        "name": "Дифференциальные уравнения",
+        "teacher": "Ишанов С.А.",
+        "room": "233",
+        "type": "practice",
+        "color": "#4CAF50"
+      },
+      "6": {
+        "name": "WEB-программирование",
+        "teacher": "Коломец В.О.",
+        "room": "",
+        "type": "lecture online",
+        "color": "#6C63FF"
+      }
+    },
+    "2": {
+      "5": {
+        "name": "Дискретная математика",
+        "teacher": "Кащенко Н.М.",
+        "room": "230",
+        "type": "practice",
+        "color": "#4CAF50"
+      }
+    }
+  },
+  "39": {
+    "0": {
+      "0": {
+        "name": "Математический анализ",
+        "teacher": "Семёнов В.Ю.",
+        "room": "231",
+        "type": "lecture",
+        "color": "#8E89A7"
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="apple-touch-icon" href="src/icon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Расписание</h1>
+            <div class="controls">
+                <button id="prevWeek">←</button>
+                <span id="currentWeek" data-week-number="1">01.09 - 07.09</span>
+                <button id="nextWeek">→</button>
+                <button id="editMode">Редактировать</button>
+                <button id="duplicateBtn">Дублировать неделю</button>
+                <button id="importExcelBtn">Импорт Excel</button>
+                <button id="importJsonBtn">Импорт JSON</button>
+                
+                <button id="currentWeekBtn">Сегодня</button>
+            </div>
+        </header>
+        <div class="schedule-controls-spacer"></div>
+        <div class="quick-actions-container">
+            <div id="quickActions"></div>
+        </div>
+
+        <div class="schedule-container">
+            <div id="scheduleBody" class="vertical-schedule">
+            </div>
+        </div>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h2>Редактирование занятия</h2>
+                <form id="lessonForm">
+                    <input type="hidden" id="editCellId">
+                    
+                    <div class="form-group">
+                        <label>Предмет:</label>
+                        <input type="text" id="lessonName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Преподаватель:</label>
+                        <input type="text" id="lessonTeacher">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Аудитория:</label>
+                        <input type="text" id="lessonRoom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Тип занятия:</label>
+                        <select id="lessonType">
+                            <option value="lecture">Лекция</option>
+                            <option value="lecture online">Лекция онлайн</option>
+                            <option value="practice">Практика</option>
+                            <option value="lab">Лабораторная</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Цвет:</label>
+                        <input type="color" id="lessonColor" value="#CBCACF">
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit">Сохранить</button>
+                        <button type="button" id="cancelEdit">Отмена</button>
+                        <button type="button" id="deleteLesson" class="delete">Удалить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="duplicateModal" class="modal">
+            <div class="modal-content">
+                <h2>Дублировать занятия</h2>
+                <form id="duplicateForm">
+                    <div class="form-group">
+                        <label>С текущей недели:</label>
+                        <input type="number" id="sourceWeek" min="1" value="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>На недели (через запятую):</label>
+                        <input type="text" id="targetWeeks" placeholder="2,3,4,5" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Тип дублирования:</label>
+                        <select id="duplicateType">
+                            <option value="all">Все занятия недели</option>
+                            <option value="selected">Только выбранные дни</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="daysSelection" style="display: none;">
+                        <label>Выберите дни:</label>
+                        <div class="days-checkboxes">
+                            <label><input type="checkbox" name="day" value="0" checked> Пн</label>
+                            <label><input type="checkbox" name="day" value="1" checked> Вт</label>
+                            <label><input type="checkbox" name="day" value="2" checked> Ср</label>
+                            <label><input type="checkbox" name="day" value="3" checked> Чт</label>
+                            <label><input type="checkbox" name="day" value="4" checked> Пт</label>
+                            <label><input type="checkbox" name="day" value="5" checked> Сб</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit">Дублировать</button>
+                        <button type="button" id="cancelDuplicate">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="confirmClearModal" class="modal">
+            <div class="modal-content">
+                <h2>Очистить неделю</h2>
+                <p>Вы уверены, что хотите очистить все занятия текущей недели?</p>
+                <div class="form-buttons">
+                    <button id="confirmClearYes" class="delete">Очистить</button>
+                    <button id="confirmClearNo">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
