@@ -39,7 +39,21 @@ header {
     padding-bottom: 5px;
     -webkit-overflow-scrolling: touch;
 }
+/**/
+.controls::-webkit-scrollbar {
+    height: 3px;
+}
 
+.controls::-webkit-scrollbar-track {
+    background: #E4E4E6;
+    border-radius: 3px;
+}
+
+.controls::-webkit-scrollbar-thumb {
+    background: #8E89A7;
+    border-radius: 3px;
+}
+/**/
 button {
     padding: 10px 15px;
     border: none;
