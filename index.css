@@ -553,6 +553,7 @@ button.delete:hover {
 #currentWeekBtn {
     width: 80%;
     margin: 1px;
+    flex-shrink: 0;
     font-weight: bold;
     cursor: pointer;
     position: relative;
