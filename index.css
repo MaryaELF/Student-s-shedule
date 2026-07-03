@@ -31,9 +31,12 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
     overflow-x: auto; 
     overflow-y: visible;
     padding-bottom: 5px;
+    width: 100%;
+    max-width: 100%;
     -webkit-overflow-scrolling: touch;
 }
 
