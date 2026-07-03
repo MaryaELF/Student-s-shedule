@@ -19,26 +19,34 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    gap: 15px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 15px 20px;
     background: #CBCACF;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    flex-shrink: 0;
+    font-size: 1.5rem;
 }
 
 .controls {
     display: flex;
-    lex-wrap: wrap;
     align-items: center;
-    gap: 10px;
-    overflow-x: auto; 
-    overflow-y: visible;
-    padding-bottom: 5px;
-    width: 100%;
-    max-width: 100%;
-    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    overflow: visible;
+    padding: 0;
 }
 
 button {
@@ -49,6 +57,8 @@ button {
     background: #8E89A7;
     color: #E4E4E6;
     font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 button:hover {
@@ -63,33 +73,37 @@ button.delete:hover {
     background: #da190b;
 }
 
-.time-cell {
-    background-color: #c8c8cb;
+.controls button#prevWeek,
+.controls button#nextWeek {
+    min-width: 40px;
+    padding: 8px 12px;
+}
+
+#currentWeekBtn {
     font-weight: bold;
-}
-
-.lesson-cell {
-    min-height: 80px;
-    vertical-align: top;
     cursor: pointer;
-    transition: background-color 0.2s;
+    padding: 8px 15px;
+    min-width: 80px;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    background: #6C63FF;
 }
 
-.lesson-content {
-    padding: 8px;
-    border-radius: 5px;
-    color: #E4E4E6;
+#currentWeekBtn:hover {
+    background: #5a52d6;
+}
+
+#currentWeek {
+    font-weight: bold;
     font-size: 14px;
+    min-width: 100px;
+    text-align: center;
+    padding: 6px 12px;
+    flex-shrink: 0;
 }
 
-.lesson-content h4 {
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.lesson-content p {
-    margin: 2px 0;
-    font-size: 12px;
+.controls button:not(#prevWeek):not(#nextWeek):not(#currentWeekBtn) {
+    flex-shrink: 0;
 }
 
 .modal {
@@ -139,27 +153,6 @@ button.delete:hover {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .schedule {
-        font-size: 12px;
-    }
-    
-    .schedule th, .schedule td {
-        padding: 6px;
-    }
-    
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .controls {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-
 .days-checkboxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -177,14 +170,6 @@ button.delete:hover {
 .days-checkboxes input[type="checkbox"] {
     width: auto;
     margin: 0;
-}
-
-.duplicate-options {
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-    border-left: 4px solid #ffffff;
 }
 
 .bulk-actions {
@@ -223,88 +208,6 @@ button.delete:hover {
     background-color: #f44336;
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    
-    header {
-        padding: 12px;
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .controls {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .controls button {
-        padding: 12px 14px;
-        font-size: 14px;
-        min-height: 44px;
-        flex-shrink: 0;
-    }
-    
-    .lesson-cell {
-        min-height: 60px;
-    }
-    
-    .lesson-content {
-        padding: 4px;
-        font-size: 10px;
-    }
-    
-    .lesson-content h4 {
-        font-size: 11px;
-    }
-    
-    .modal-content {
-        margin: 5% auto;
-        padding: 20px;
-        width: 95%;
-        max-width: none;
-    }
-    
-    .form-group input,
-    .form-group select {
-        padding: 12px;
-        font-size: 16px; 
-    }
-    
-    .form-buttons {
-        flex-direction: column;
-    }
-    
-    .bulk-actions {
-        flex-direction: column;
-    }
-    
-    .bulk-actions button {
-        width: 100%;
-        margin: 1px 0;
-    }
-}
-
-.lesson-cell {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-@media (hover: none) and (pointer: coarse) {
-    button:active {
-        transform: scale(0.98);
-        transition: transform 0.1s;
-    }
-    
-    .lesson-cell:active {
-        background-color: #E4E4E6;
-    }
-}
-
 .quick-actions-container {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -321,6 +224,7 @@ button.delete:hover {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    animation: slideIn 0.4s ease-out;
 }
 
 .day-header {
@@ -368,10 +272,11 @@ button.delete:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
-.lesson-content:hover {
-    background: #E4E4E6;
+.lesson-content:active {
+    transform: scale(0.98);
 }
 
 .lesson-content.has-lesson {
@@ -412,14 +317,77 @@ button.delete:hover {
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-    .vertical-schedule {
-        gap: 15px;
+@media (max-width: 1024px) {
+    header {
+        padding: 12px 15px;
+        gap: 10px;
     }
     
-    .day-header {
-        padding: 14px 16px;
-        font-size: 16px;
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .controls button {
+        padding: 8px 12px;
+        font-size: 12px;
+        min-height: 34px;
+    }
+    
+    #currentWeekBtn {
+        padding: 8px 12px;
+        min-width: 70px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 10px 12px;
+        gap: 10px;
+        flex-direction: column;
+    }
+    
+    header h1 {
+        text-align: center;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+    
+    .controls {
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+    }
+    
+    .controls button {
+        padding: 8px 10px;
+        font-size: 12px;
+        min-height: 38px;
+    }
+    
+    .controls button#prevWeek,
+    .controls button#nextWeek {
+        min-width: 40px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    #currentWeekBtn {
+        min-width: 70px;
+        padding: 8px 12px;
+        font-size: 12px;
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+    
+    #currentWeek {
+        font-size: 13px;
+        min-width: 80px;
+        padding: 6px 10px;
     }
     
     .lesson-row {
@@ -436,28 +404,65 @@ button.delete:hover {
         min-height: 70px;
     }
     
+    .day-header {
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+    
     .lesson-details {
         padding: 10px;
     }
     
     .lesson-details h4 {
         font-size: 15px;
-        margin-bottom: 6px;
     }
     
     .lesson-details p {
         font-size: 12px;
     }
+    
+    .vertical-schedule {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
-    .vertical-schedule {
-        gap: 12px;
+    header {
+        padding: 8px 10px;
+        gap: 8px;
     }
     
-    .day-header {
-        padding: 12px;
-        font-size: 15px;
+    header h1 {
+        font-size: 1rem;
+    }
+    
+    .controls {
+        gap: 4px;
+    }
+    
+    .controls button {
+        font-size: 10px;
+        padding: 6px 8px;
+        min-height: 32px;
+    }
+    
+    .controls button#prevWeek,
+    .controls button#nextWeek {
+        min-width: 32px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    #currentWeekBtn {
+        min-width: 60px;
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+    
+    #currentWeek {
+        font-size: 11px;
+        min-width: 70px;
+        padding: 4px 8px;
     }
     
     .lesson-row {
@@ -474,6 +479,11 @@ button.delete:hover {
         min-height: 65px;
     }
     
+    .day-header {
+        padding: 12px;
+        font-size: 15px;
+    }
+    
     .lesson-details {
         padding: 8px;
     }
@@ -481,84 +491,60 @@ button.delete:hover {
     .lesson-details h4 {
         font-size: 14px;
     }
-}
-
-.day-section {
-    animation: slideIn 0.4s ease-out;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.lesson-content {
-    transition: all 0.3s ease;
-}
-
-.lesson-content:active {
-    transform: scale(0.98);
-}
-
-.week-navigation {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-#currentWeek {
-    font-weight: bold;
-    font-size: 16px;
-    min-width: 120px;
-    text-align: center;
-    padding: 8px 12px;
-}
-
-.week-info {
-    font-size: 12px;
-    color: #666;
-    margin-top: 5px;
-}
-
-@media (max-width: 768px) {
-    #currentWeek {
-        font-size: 14px;
-        min-width: 120px;
+    
+    .vertical-schedule {
+        gap: 12px;
     }
     
+    .modal-content {
+        margin: 5% auto;
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .bulk-actions {
+        flex-direction: column;
+    }
+    
+    .bulk-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .controls button {
+        font-size: 9px;
+        padding: 4px 6px;
+        min-height: 28px;
+    }
+    
+    #currentWeekBtn {
+        min-width: 50px;
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+    
+    #currentWeek {
+        font-size: 10px;
+        min-width: 60px;
+        padding: 3px 6px;
+    }
+}
+
+@media (min-width: 1200px) {
     .controls {
-        flex-wrap: wrap;
-        gap: 10px;
+        flex-wrap: nowrap;
     }
-}
-
-@media (max-width: 480px) {
-    #currentWeek {
-        font-size: 13px;
-        min-width: 110px;
-        padding: 6px 8px;
-    }
-    
-    .day-header {
-        font-size: 14px;
-    }
-}
-
-#currentWeekBtn {
-    width: 80%;
-    margin: 1px;
-    flex-shrink: 0;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
 }
 
 #confirmClearModal .modal-content {
@@ -575,110 +561,13 @@ button.delete:hover {
     justify-content: center;
 }
 
-@media (max-width: 1024px) {
-    header {
-        padding: 15px;
-        gap: 12px;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
-    .controls button {
-        padding: 8px 10px;
-        font-size: 12px;
-        min-height: 34px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    
-    header {
-        padding: 12px;
-        gap: 10px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    header h1 {
-        text-align: center;
-        font-size: 1.3rem;
-    }
-    
-    .controls {
-        justify-content: center;
-        gap: 6px;
-        min-width: unset;
-        width: 100%;
-    }
-    
-    .controls button {
-        padding: 8px 10px;
-        font-size: 12px;
-        min-height: 40px;
-        flex: 1 0 auto;
-        min-width: 60px;
-    }
-    
-    .controls button#prevWeek,
-    .controls button#nextWeek {
-        flex: 0 0 auto;
-        min-width: 44px;
-        padding: 8px 12px;
-        font-size: 16px;
-    }
-    
-    #currentWeek {
-        font-size: 13px;
-        min-width: 80px;
-        padding: 6px 8px;
-        flex: 0 0 auto;
-    }
-    
-    #currentWeekBtn {
-        flex: 1 1 100% !important;
-        min-width: 100% !important;
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-        gap: 8px;
-    }
-    
-    header h1 {
-        font-size: 1.1rem;
-    }
-    
-    .controls {
-        gap: 5px;
-    }
-    
-    .controls button {
-        font-size: 11px;
-        padding: 6px 8px;
-        min-height: 36px;
-        min-width: 50px;
-    }
-    
-    .controls button#prevWeek,
-    .controls button#nextWeek {
-        min-width: 36px;
-        padding: 6px 8px;
-        font-size: 14px;
-    }
-    
-    #currentWeek {
-        font-size: 11px;
-        min-width: 70px;
-        padding: 4px 6px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .controls {
-        flex-wrap: nowrap;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
