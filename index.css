@@ -243,6 +243,7 @@ button.delete:hover {
         padding: 12px 14px;
         font-size: 14px;
         min-height: 44px;
+        flex-shrink: 0;
     }
     
     .lesson-cell {
