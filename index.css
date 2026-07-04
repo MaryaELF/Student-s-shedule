@@ -36,7 +36,7 @@ header {
 
 header h1 {
     flex-shrink: 0;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-right: auto;
 }
 
@@ -330,7 +330,7 @@ button.delete:hover {
     }
     
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     
     .controls {
@@ -369,7 +369,7 @@ button.delete:hover {
     
     header h1 {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         width: 100%;
         margin-right: 0;
     }
@@ -456,7 +456,7 @@ button.delete:hover {
     }
     
     header h1 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
     .controls {
