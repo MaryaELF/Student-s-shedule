@@ -1,7 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #454253;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: #CBCACF;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+}
+
 header h1 {
     flex-shrink: 0;
     font-size: 1.8rem;
     margin-right: auto;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    flex: 0 1 auto;
+    overflow: hidden;
+    padding: 0;
+    flex-wrap: nowrap;
+    margin-left: auto;
+}
+
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #8E89A7;
+    color: #E4E4E6;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+button:hover {
+    background: #76718a;
+}
+
+button.delete {
+    background: #f44336;
+}
+
+button.delete:hover {
+    background: #da190b;
+}
+
+.controls button#prevWeek,
+.controls button#nextWeek {
+    min-width: 32px;
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+#currentWeekBtn {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 10px;
+    min-width: auto;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    background: #8E89A7;
+    font-size: 12px;
+}
+
+#currentWeekBtn:hover {
+    background: #76718a;
+}
+
+#currentWeek {
+    font-weight: bold;
+    font-size: 13px;
+    min-width: 80px;
+    text-align: center;
+    padding: 4px 8px;
+    flex-shrink: 0;
+}
+
+.controls button:not(#prevWeek):not(#nextWeek):not(#currentWeekBtn) {
+    flex-shrink: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #CBCACF;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E4E4E6;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.days-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.days-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.days-checkboxes input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.bulk-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bulk-actions button {
+    flex: 1;
+    min-width: 120px;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background-color: #8E89A7;
+    color: #E4E4E6;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1001;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+.quick-actions-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.vertical-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day-section {
+    background: #E4E4E6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    animation: slideIn 0.4s ease-out;
+}
+
+.day-header {
+    background: linear-gradient(135deg, #8E89A7, #7b7691);
+    color: #E4E4E6;
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.day-lessons {
+    padding: 0;
+}
+
+.lesson-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1px;
+    border-bottom: 1px solid #E4E4E6;
+}
+
+.lesson-row:last-child {
+    border-bottom: none;
+}
+
+.lesson-time {
+    background: #d9d9dc;
+    padding: 15px 12px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #eee;
+}
+
+.lesson-content {
+    padding: 15px;
+    background: #E4E4E6;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.lesson-content:active {
+    transform: scale(0.98);
+}
+
+.lesson-content.has-lesson {
+    background: #E4E4E6;
+}
+
+.lesson-details {
+    background: linear-gradient(135deg, var(--lesson-color, #454253), #454253);
+    color: #E4E4E6;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+.lesson-details h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.lesson-details p {
+    margin: 4px 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.lesson-details small {
+    font-size: 12px;
+    opacity: 0.8;
+    display: block;
+    margin-top: 6px;
+}
+
+.empty-lesson {
+    color: #999;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
 }
 
 @media (max-width: 1024px) {
