@@ -1,3 +1,24 @@
+:root {
+    --bg-main: #454253;
+    --bg-header: #CBCACF;
+    --bg-cell: #E4E4E6;
+    --bg-time: #d9d9dc;
+    --bg-button: #8E89A7;
+    --bg-button-hover: #76718a;
+    --bg-danger: #f44336;
+    --bg-danger-hover: #da190b;
+    --text-light: #E4E4E6;
+    --text-dark: #333;
+    --text-muted: #999;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    --border-light: #E4E4E6;
+    --border-time: #eee;
+    --gradient-start: #8E89A7;
+    --gradient-end: #7b7691;
+    --lesson-color-default: #454253;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +27,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #454253;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
 }
 
 .container {
@@ -25,9 +46,9 @@ header {
     gap: 10px;
     margin-bottom: 20px;
     padding: 10px 15px;
-    background: #CBCACF;
+    background: var(--bg-header);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px var(--shadow);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -36,7 +57,7 @@ header {
 
 header h1 {
     flex-shrink: 0;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-right: auto;
 }
 
@@ -57,8 +78,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: #8E89A7;
-    color: #E4E4E6;
+    background: var(--bg-button);
+    color: var(--text-light);
     font-weight: bold;
     white-space: nowrap;
     flex-shrink: 0;
@@ -66,15 +87,15 @@ button {
 }
 
 button:hover {
-    background: #76718a;
+    background: var(--bg-button-hover);
 }
 
 button.delete {
-    background: #f44336;
+    background: var(--bg-danger);
 }
 
 button.delete:hover {
-    background: #da190b;
+    background: var(--bg-danger-hover);
 }
 
 .controls button#prevWeek,
@@ -91,12 +112,12 @@ button.delete:hover {
     min-width: auto;
     width: auto !important;
     flex: 0 0 auto !important;
-    background: #8E89A7;
+    background: var(--bg-button);
     font-size: 12px;
 }
 
 #currentWeekBtn:hover {
-    background: #76718a;
+    background: var(--bg-button-hover);
 }
 
 #currentWeek {
@@ -124,13 +145,13 @@ button.delete:hover {
 }
 
 .modal-content {
-    background-color: #CBCACF;
+    background-color: var(--bg-header);
     margin: 10% auto;
     padding: 30px;
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 20px var(--shadow-dark);
 }
 
 .form-group {
@@ -147,7 +168,7 @@ button.delete:hover {
 .form-group select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #E4E4E6;
+    border: 1px solid var(--border-light);
     border-radius: 5px;
     font-size: 14px;
 }
@@ -195,10 +216,10 @@ button.delete:hover {
     top: 20px;
     right: 20px;
     padding: 15px 20px;
-    background-color: #8E89A7;
-    color: #E4E4E6;
+    background-color: var(--bg-button);
+    color: var(--text-light);
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px var(--shadow);
     z-index: 1001;
     opacity: 0;
     transform: translateY(-20px);
@@ -211,7 +232,7 @@ button.delete:hover {
 }
 
 .notification.error {
-    background-color: #f44336;
+    background-color: var(--bg-danger);
 }
 
 .quick-actions-container {
@@ -226,16 +247,16 @@ button.delete:hover {
 }
 
 .day-section {
-    background: #E4E4E6;
+    background: var(--bg-cell);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow);
     animation: slideIn 0.4s ease-out;
 }
 
 .day-header {
-    background: linear-gradient(135deg, #8E89A7, #7b7691);
-    color: #E4E4E6;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: var(--text-light);
     padding: 16px 20px;
     font-size: 18px;
     font-weight: bold;
@@ -250,7 +271,7 @@ button.delete:hover {
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 1px;
-    border-bottom: 1px solid #E4E4E6;
+    border-bottom: 1px solid var(--bg-cell);
 }
 
 .lesson-row:last-child {
@@ -258,20 +279,20 @@ button.delete:hover {
 }
 
 .lesson-time {
-    background: #d9d9dc;
+    background: var(--bg-time);
     padding: 15px 12px;
     font-weight: bold;
     font-size: 14px;
-    color: #333;
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid #eee;
+    border-right: 1px solid var(--border-time);
 }
 
 .lesson-content {
     padding: 15px;
-    background: #E4E4E6;
+    background: var(--bg-cell);
     transition: background-color 0.2s ease;
     cursor: pointer;
     min-height: 80px;
@@ -286,12 +307,12 @@ button.delete:hover {
 }
 
 .lesson-content.has-lesson {
-    background: #E4E4E6;
+    background: var(--bg-cell);
 }
 
 .lesson-details {
-    background: linear-gradient(135deg, var(--lesson-color, #454253), #454253);
-    color: #E4E4E6;
+    background: linear-gradient(135deg, var(--lesson-color, var(--lesson-color-default)), var(--lesson-color-default));
+    color: var(--text-light);
     padding: 12px;
     border-radius: 8px;
     margin: 5px 0;
@@ -317,7 +338,7 @@ button.delete:hover {
 }
 
 .empty-lesson {
-    color: #999;
+    color: var(--text-muted);
     font-style: italic;
     text-align: center;
     padding: 20px;
@@ -330,7 +351,7 @@ button.delete:hover {
     }
     
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
     
     .controls {
@@ -369,7 +390,7 @@ button.delete:hover {
     
     header h1 {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         width: 100%;
         margin-right: 0;
     }
@@ -456,7 +477,7 @@ button.delete:hover {
     }
     
     header h1 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
     .controls {
@@ -593,7 +614,7 @@ button.delete:hover {
 #confirmClearModal p {
     margin: 20px 0;
     font-size: 16px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 #confirmClearModal .form-buttons {
