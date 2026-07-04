@@ -37,7 +37,6 @@ header {
 header h1 {
     flex-shrink: 0;
     font-size: 1.3rem;
-    margin-right: auto;
 }
 
 .controls {
@@ -45,11 +44,10 @@ header h1 {
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     overflow: hidden;
     padding: 0;
     flex-wrap: nowrap;
-    margin-left: auto;
 }
 
 button {
@@ -371,7 +369,6 @@ button.delete:hover {
         text-align: center;
         font-size: 1.1rem;
         width: 100%;
-        margin-right: 0;
     }
     
     .controls {
@@ -382,7 +379,6 @@ button.delete:hover {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 2px;
-        margin-left: 0;
     }
     
     .controls button {
@@ -466,7 +462,6 @@ button.delete:hover {
         -webkit-overflow-scrolling: touch;
         padding-bottom: 4px;
         justify-content: flex-start;
-        margin-left: 0;
     }
     
     .controls button {
