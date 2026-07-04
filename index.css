@@ -51,7 +51,7 @@ header h1 {
 }
 
 button {
-    padding: 8px 14px;
+    padding: 6px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -60,7 +60,7 @@ button {
     font-weight: bold;
     white-space: nowrap;
     flex-shrink: 0;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 button:hover {
@@ -77,20 +77,20 @@ button.delete:hover {
 
 .controls button#prevWeek,
 .controls button#nextWeek {
-    min-width: 36px;
-    padding: 8px 10px;
-    font-size: 15px;
+    min-width: 32px;
+    padding: 6px 8px;
+    font-size: 14px;
 }
 
 #currentWeekBtn {
     font-weight: bold;
     cursor: pointer;
-    padding: 8px 14px;
+    padding: 6px 10px;
     min-width: auto;
     width: auto !important;
     flex: 0 0 auto !important;
     background: #8E89A7;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #currentWeekBtn:hover {
@@ -99,10 +99,10 @@ button.delete:hover {
 
 #currentWeek {
     font-weight: bold;
-    font-size: 14px;
-    min-width: 100px;
+    font-size: 13px;
+    min-width: 80px;
     text-align: center;
-    padding: 6px 12px;
+    padding: 4px 8px;
     flex-shrink: 0;
 }
 
@@ -335,27 +335,22 @@ button.delete:hover {
         gap: 4px;
     }
     
-    button {
-        padding: 7px 12px;
-        font-size: 12px;
-    }
-    
-    .controls button#prevWeek,
-    .controls button#nextWeek {
-        min-width: 34px;
-        padding: 7px 9px;
-        font-size: 14px;
+    .controls button {
+        padding: 5px 8px;
+        font-size: 11px;
+        min-height: 30px;
     }
     
     #currentWeekBtn {
-        padding: 7px 12px;
-        font-size: 12px;
+        padding: 5px 8px;
+        min-width: auto;
+        font-size: 11px;
     }
     
     #currentWeek {
-        font-size: 13px;
-        min-width: 90px;
-        padding: 5px 10px;
+        font-size: 12px;
+        min-width: 70px;
+        padding: 4px 6px;
     }
 }
 
@@ -386,29 +381,32 @@ button.delete:hover {
         padding-bottom: 2px;
     }
     
-    button {
-        padding: 6px 10px;
+    .controls button {
+        padding: 5px 8px;
         font-size: 11px;
+        min-height: 30px;
+        flex-shrink: 0;
     }
     
     .controls button#prevWeek,
     .controls button#nextWeek {
         min-width: 30px;
-        padding: 6px 8px;
-        font-size: 13px;
+        padding: 5px 7px;
+        font-size: 12px;
     }
     
     #currentWeekBtn {
-        padding: 6px 10px;
+        min-width: auto;
+        padding: 5px 8px;
         font-size: 11px;
         flex: 0 0 auto !important;
         width: auto !important;
     }
     
     #currentWeek {
-        font-size: 12px;
-        min-width: 80px;
-        padding: 4px 8px;
+        font-size: 11px;
+        min-width: 70px;
+        padding: 4px 6px;
     }
     
     .lesson-row {
@@ -466,29 +464,32 @@ button.delete:hover {
         justify-content: flex-start;
     }
     
-    button {
-        font-size: 10px;
-        padding: 5px 8px;
+    .controls button {
+        font-size: 9px;
+        padding: 4px 6px;
+        min-height: 26px;
+        flex-shrink: 0;
     }
     
     .controls button#prevWeek,
     .controls button#nextWeek {
-        min-width: 28px;
-        padding: 5px 7px;
-        font-size: 12px;
+        min-width: 26px;
+        padding: 4px 6px;
+        font-size: 11px;
     }
     
     #currentWeekBtn {
-        padding: 5px 8px;
-        font-size: 10px;
+        min-width: auto;
+        padding: 4px 6px;
+        font-size: 9px;
         flex: 0 0 auto !important;
         width: auto !important;
     }
     
     #currentWeek {
         font-size: 10px;
-        min-width: 70px;
-        padding: 3px 6px;
+        min-width: 60px;
+        padding: 3px 5px;
     }
     
     .lesson-row {
@@ -548,27 +549,29 @@ button.delete:hover {
 }
 
 @media (max-width: 360px) {
-    button {
-        font-size: 9px;
-        padding: 4px 6px;
+    .controls button {
+        font-size: 8px;
+        padding: 3px 5px;
+        min-height: 22px;
     }
     
     .controls button#prevWeek,
     .controls button#nextWeek {
-        min-width: 24px;
-        padding: 4px 6px;
-        font-size: 11px;
+        min-width: 22px;
+        padding: 3px 5px;
+        font-size: 10px;
     }
     
     #currentWeekBtn {
-        padding: 4px 6px;
-        font-size: 9px;
+        min-width: auto;
+        padding: 3px 5px;
+        font-size: 8px;
     }
     
     #currentWeek {
         font-size: 9px;
-        min-width: 60px;
-        padding: 2px 5px;
+        min-width: 50px;
+        padding: 2px 4px;
     }
 }
 
