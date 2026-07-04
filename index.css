@@ -82,11 +82,12 @@ button.delete:hover {
 #currentWeekBtn {
     font-weight: bold;
     cursor: pointer;
-    padding: 8px 15px;
-    min-width: 80px;
+    padding: 6px 10px;
+    min-width: 55px;
     width: auto !important;
     flex: 0 0 auto !important;
     background: #6C63FF;
+    font-size: 12px;
 }
 
 #currentWeekBtn:hover {
@@ -377,9 +378,9 @@ button.delete:hover {
     }
     
     #currentWeekBtn {
-        min-width: 70px;
-        padding: 8px 12px;
-        font-size: 12px;
+        min-width: 55px;
+        padding: 6px 10px;
+        font-size: 11px;
         flex: 0 0 auto !important;
         width: auto !important;
     }
@@ -454,8 +455,8 @@ button.delete:hover {
     }
     
     #currentWeekBtn {
-        min-width: 60px;
-        padding: 6px 10px;
+        min-width: 48px;
+        padding: 5px 8px;
         font-size: 10px;
     }
     
@@ -529,8 +530,8 @@ button.delete:hover {
     }
     
     #currentWeekBtn {
-        min-width: 50px;
-        padding: 4px 8px;
+        min-width: 40px;
+        padding: 4px 6px;
         font-size: 9px;
     }
     
